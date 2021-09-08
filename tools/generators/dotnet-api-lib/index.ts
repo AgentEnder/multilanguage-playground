@@ -23,7 +23,6 @@ export default async function (tree: Tree, schema: any) {
   });
   addDotnetProject(tree, schema);
   // CLEANUP
-  addProjectConfiguration;
   if (isDryRun) {
     removeSync(dir);
   }
