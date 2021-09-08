@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "products-api": {
+      "root": "apps/products-api",
+      "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/workspace:run-commands",
@@ -9,6 +11,151 @@
             "cwd": "apps/products-api",
             "command": "dotnet build"
           }
+        }
+      }
+    },
+    "shop-api": {
+      "root": "apps/shop/api",
+      "projectType": "application",
+      "sourceRoot": "apps/shop/api",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/apps/shop-api",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nx-dotnet/core:serve",
+          "options": {
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
+    },
+    "shop-db-access": {
+      "root": "libs/shop/db-access",
+      "projectType": "library",
+      "sourceRoot": "libs/shop/db-access",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/libs/shop/db-access",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
+    },
+    "shop-db-access-test": {
+      "root": "libs/shop/db-access-test",
+      "projectType": "library",
+      "sourceRoot": "libs/shop/db-access-test",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/libs/shop/db-access-test",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "test": {
+          "executor": "@nx-dotnet/core:test",
+          "options": {}
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
+    },
+    "shop-mvc": {
+      "root": "apps/shop/mvc",
+      "projectType": "application",
+      "sourceRoot": "apps/shop/mvc",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/apps/shop-mvc",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nx-dotnet/core:serve",
+          "options": {
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
+    },
+    "shop-mvc-test": {
+      "root": "apps/shop/mvc-test",
+      "projectType": "application",
+      "sourceRoot": "apps/shop/mvc-test",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/apps/shop-mvc-test",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "test": {
+          "executor": "@nx-dotnet/core:test",
+          "options": {}
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
         }
       }
     }

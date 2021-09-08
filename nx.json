@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -31,5 +26,25 @@
       }
     ]
   },
-  "projects": {}
+  "projects": {
+    "products-api": {},
+    "shop-api": {
+      "implicitDependencies": ["products-api"],
+      "tags": ["nx-dotnet"]
+    },
+    "shop-db-access": {
+      "tags": ["nx-dotnet"]
+    },
+    "shop-db-access-test": {
+      "tags": ["nx-dotnet"]
+    },
+    "shop-mvc": {
+      "implicitDependencies": ["shop-api"],
+      "tags": ["nx-dotnet"]
+    },
+    "shop-mvc-test": {
+      "tags": ["nx-dotnet"]
+    }
+  },
+  "plugins": ["@nx-dotnet/core"]
 }

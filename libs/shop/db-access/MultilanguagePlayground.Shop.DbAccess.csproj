@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    
+    <TargetFramework>net5.0</TargetFramework>
+    
+    <OutputPath>../..\../dist/libs/shop/db-access</OutputPath>
+  </PropertyGroup>
+  
+  <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
+    
+    <Exec Command="node ../../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p shop-db-access"/>
+    
+  </Target>
+</Project>

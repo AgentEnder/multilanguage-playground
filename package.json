@@ -5,10 +5,12 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "prepare": "nx g @nx-dotnet/core:restore"
   },
   "private": true,
   "dependencies": {
+    "@nx-dotnet/core": "^1.3.2",
     "fs-extra": "^10.0.0"
   },
   "devDependencies": {
