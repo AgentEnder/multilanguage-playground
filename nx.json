@@ -28,6 +28,7 @@
   },
   "projects": {
     "modern-shop-app": {
+      "implicitDependencies": ["shop-api"],
       "tags": []
     },
     "modern-shop-e2e": {

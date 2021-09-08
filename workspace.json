@@ -57,7 +57,7 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve": {
+        "serve-base": {
           "executor": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
@@ -68,6 +68,16 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "serve": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx serve-base modern-shop-app",
+              "nx serve shop-api"
+            ],
+            "parallel": true
+          }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",

@@ -4,7 +4,7 @@
     
     <TargetFramework>net5.0</TargetFramework>
     
-    <OutputPath>../../dist/apps/shop-api</OutputPath>
+    <OutputPath>../../../dist/apps/shop-api</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>
@@ -23,7 +23,7 @@
   
   <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
     
-    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p shop-api" />
+    <Exec Command="node ../../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p shop-api" />
     
   </Target>
 </Project>

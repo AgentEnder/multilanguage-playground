@@ -38,7 +38,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-apps/*/bin
-apps/*/obj
-libs/*/bin
-libs/*/obj
+apps/**/bin
+apps/**/obj
+libs/**/bin
+libs/**/obj
