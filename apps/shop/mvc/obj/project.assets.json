@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc\\MultilanguagePlayground.ShopMvc.csproj",
+      "projectUniqueName": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc\\MultilanguagePlayground.ShopMvc.csproj",
       "projectName": "MultilanguagePlayground.ShopMvc",
-      "projectPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc\\MultilanguagePlayground.ShopMvc.csproj",
+      "projectPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc\\MultilanguagePlayground.ShopMvc.csproj",
       "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc\\obj\\",
+      "outputPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bhKh5IV02+kB4OFJ4/nuso92SpG4bHZsNjix1M6y4vtWsxvpmOeGzhP4hXvHmlmlovBfNC63BqVavyEJ9zXnGA==",
+  "dgSpecHash": "Y75JQCy4zAPHHFRlDyxFGlxdTJHuQ0d4Ggc/BvoAheYakn7R07DDDI6KL/H48JI0koF64///fagB89iBe83J7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc-test\\MultilanguagePlayground.ShopMvc.Test.csproj",
+  "projectFilePath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc-test\\MultilanguagePlayground.ShopMvc.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\craig\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

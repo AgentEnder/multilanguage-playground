@@ -1,8 +1,129 @@
 {
   "version": 2,
   "projects": {
+    "modern-shop-app": {
+      "projectType": "application",
+      "root": "apps/modern-shop/app",
+      "sourceRoot": "apps/modern-shop/app/src",
+      "prefix": "multilanguage-playground",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/modern-shop/app",
+            "index": "apps/modern-shop/app/src/index.html",
+            "main": "apps/modern-shop/app/src/main.ts",
+            "polyfills": "apps/modern-shop/app/src/polyfills.ts",
+            "tsConfig": "apps/modern-shop/app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/modern-shop/app/src/favicon.ico",
+              "apps/modern-shop/app/src/assets"
+            ],
+            "styles": ["apps/modern-shop/app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/modern-shop/app/src/environments/environment.ts",
+                  "with": "apps/modern-shop/app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "modern-shop-app:build:production"
+            },
+            "development": {
+              "browserTarget": "modern-shop-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "modern-shop-app:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/modern-shop/app/src/**/*.ts",
+              "apps/modern-shop/app/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/modern-shop/app"],
+          "options": {
+            "jestConfig": "apps/modern-shop/app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "modern-shop-e2e": {
+      "root": "apps/modern-shop/e2e",
+      "sourceRoot": "apps/modern-shop/e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/modern-shop/e2e/cypress.json",
+            "devServerTarget": "modern-shop-app:serve:development",
+            "tsConfig": "apps/modern-shop/e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "modern-shop-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/modern-shop/e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "products-api": {
       "root": "apps/products-api",
+      "sourceRoot": "apps/products-api",
       "projectType": "application",
       "targets": {
         "build": {
@@ -161,6 +282,22 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
   }
 }

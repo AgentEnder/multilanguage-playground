@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J8hDbTP9AIH3qJCnEhCFv3o+Mu4MgAuAJglxGWvW3NTrntUiz4ibbfEXI7Ap1EACHFD2WNPz0H7d5f+rcW9t6g==",
+  "dgSpecHash": "9Z2fi9cZlog1FmOWviLyvqIirjw8hq92BOWXgx76iEi7bf0VdCmFUobWn2b3dwJ1tfi3gcHo1M40USYWlUiUHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc\\MultilanguagePlayground.ShopMvc.csproj",
+  "projectFilePath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc\\MultilanguagePlayground.ShopMvc.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1648,6 +1648,19 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "MultilanguagePlayground.ShopMvc/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MultilanguagePlayground.ShopMvc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MultilanguagePlayground.ShopMvc.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -5590,11 +5603,17 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "MultilanguagePlayground.ShopMvc/1.0.0": {
+      "type": "project",
+      "path": "../mvc/MultilanguagePlayground.ShopMvc.csproj",
+      "msbuildProject": "../mvc/MultilanguagePlayground.ShopMvc.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.NET.Test.Sdk >= 16.7.1",
+      "MultilanguagePlayground.ShopMvc >= 1.0.0",
       "coverlet.collector >= 1.3.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -5608,11 +5627,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc-test\\MultilanguagePlayground.ShopMvc.Test.csproj",
+      "projectUniqueName": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc-test\\MultilanguagePlayground.ShopMvc.Test.csproj",
       "projectName": "MultilanguagePlayground.ShopMvc.Test",
-      "projectPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc-test\\MultilanguagePlayground.ShopMvc.Test.csproj",
+      "projectPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc-test\\MultilanguagePlayground.ShopMvc.Test.csproj",
       "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop-mvc-test\\obj\\",
+      "outputPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc-test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5633,7 +5652,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc\\MultilanguagePlayground.ShopMvc.csproj": {
+              "projectPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\apps\\shop\\mvc\\MultilanguagePlayground.ShopMvc.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

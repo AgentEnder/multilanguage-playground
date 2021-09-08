@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "MultilanguagePlayground.Shop.DbAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MultilanguagePlayground.Shop.DbAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MultilanguagePlayground.Shop.DbAccess.dll": {}
+        }
       }
     }
   },
@@ -4608,11 +4618,17 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "MultilanguagePlayground.Shop.DbAccess/1.0.0": {
+      "type": "project",
+      "path": "../db-access/MultilanguagePlayground.Shop.DbAccess.csproj",
+      "msbuildProject": "../db-access/MultilanguagePlayground.Shop.DbAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
+      "MultilanguagePlayground.Shop.DbAccess >= 1.0.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1"
     ]
@@ -4650,7 +4666,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\libs\\shop\\db-access\\MultilanguagePlayground.Shop.DbAccess.csproj": {
+              "projectPath": "C:\\Users\\craig\\Desktop\\articles\\2021-nx-conf\\multilanguage-playground\\libs\\shop\\db-access\\MultilanguagePlayground.Shop.DbAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
